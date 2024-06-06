@@ -18,6 +18,7 @@ npm install
 Run the application with this command:
 
 npm start
-#Tech Stack
+
+####Tech Stack
 
 ReactJS Node.js Express.js ui-Router MongoDB Database
