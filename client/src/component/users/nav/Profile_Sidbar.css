@@ -1,0 +1,94 @@
+.user__profile__sidebar__containser{
+    height: 100vh;
+    position: fixed;
+    width:20vw;
+    top: 70px;
+    transition: all 1s ease;
+    z-index: 999;
+   
+}
+.user__profile__sidebar__box{
+    border-right: 2px solid black;
+    height: 90vh;
+    width: 100%;
+    overflow: scroll;
+    box-shadow: 0 0 5px rgb(236, 234, 234);
+    background-color: white;
+
+}
+.user__profile__sidebar__body{
+    margin: 10px;
+    padding: 10px;
+}
+.user__profile__sidebar__body>li{
+    margin: 8px;
+    padding: 12px;
+    list-style: none;
+    font-size: 18;
+   transition: all 0.5s ;
+   border: 1px solid black;
+   border-radius: 5px;
+   overflow: hidden;
+}
+.user__profile__sidebar__body>li:hover{
+    background-color: rgb(4, 5, 71);
+    border-radius: 4px;
+}
+.user__profile__sidebar__body>li>a{
+    color: rgb(32, 9, 238);
+    text-decoration: none;
+    margin-left: 10px;
+    }
+.user__profile__sidebar__body>li>a:hover{
+color: rgb(235, 235, 235);
+}
+@media(max-width:600px){
+    .user__profile__sidebar__containser{
+        height: 100vh;
+        position: fixed;
+        width:50vw;
+        top: 83px;
+    }
+    .user__profile__sidebar__box{
+        border-right: 2px solid black;
+        height: 100vh;
+        width: 100%;
+        overflow: scroll;
+        box-shadow: 0 0 5px black;
+    } 
+    .user__profile__sidebar__body>li{
+        margin: 5px;
+        padding: 10px;
+        list-style: none;
+        font-size: 18;
+       transition: all 0.5s ;
+       border: 1px solid black;
+       border-radius: 5px;
+       overflow: hidden;
+    }  
+}
+@media(max-width:400px){
+    .user__profile__sidebar__containser{
+        height: 100vh;
+        position: fixed;
+        width:50vw;
+        top: 87px;
+    }
+    .user__profile__sidebar__box{
+        border-right: 2px solid black;
+        height: 100vh;
+        width: 100%;
+        overflow: scroll;
+        box-shadow: 0 0 5px rgb(202, 199, 199);
+    } 
+    .user__profile__sidebar__body>li{
+        margin: 5px;
+        padding: 5px;
+        list-style: none;
+       font-size: 13px;
+       transition: all 0.5s ;
+       border: 1px solid rgb(216, 210, 210);
+       border-radius: 5px;
+       overflow: hidden;
+    }  
+}

@@ -1,0 +1,41 @@
+.page__404__containar{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   }
+   .page__404__box{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   }
+   .page__404__box>h4{
+       font-size: 20px;
+       font-weight: bold;
+       font-style: italic;
+       opacity: 0.3;
+       margin: 5px;
+     }
+   .page__404__box>h1{
+     font-size: 50px;
+     font-weight: bold;
+     font-style: italic;
+     opacity: 0.4;
+   }
+   .back__button__section{
+     position: absolute;
+     top: 0;
+     left:0;
+     margin: 10px;
+   }
+   .back__button__section>button{
+    border: none;
+    padding: 4px 30px;
+     }
+     .back__left__icon{
+       font-size: 12px !important;
+     }

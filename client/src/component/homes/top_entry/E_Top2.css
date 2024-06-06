@@ -1,0 +1,111 @@
+.top2__entry__container {
+  background-color: rgb(218, 216, 213);
+  height: 320px;
+  width: 100%;
+  margin-top: 300px;
+  transition: all 3s;
+}
+.top2__entry__box {
+  content: "";
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 21%);
+  height: 320px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(24, 36, 150, 1) 52%,
+    rgba(0, 0, 0, 1) 100%,
+    rgba(12, 5, 69, 1) 100%
+  );
+  position: relative;
+}
+.top__center__bottom {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+}
+.top__center__bottom > div {
+  margin: 5px;
+}
+.top__center__bottom > div > button {
+  width: 200px;
+  border: none;
+  padding: 5px;
+  box-shadow: 0 0 5px rgb(238, 240, 232);
+  background-color: transparent;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(16, 201, 189, 1) 0%,
+    rgba(175, 129, 184, 0.856162447889312) 0%,
+    rgba(7, 25, 111, 1) 0%,
+    rgba(22, 41, 196, 1) 40%,
+    rgba(60, 16, 227, 1) 91%
+  );
+  font-weight: bold;
+  transition: all 1s inherit;
+}
+.top__center__bottom > div > button:hover {
+  border: 2px solid rgb(214, 207, 207);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(16, 201, 189, 1) 0%,
+    rgba(175, 129, 184, 0.856162447889312) 0%,
+    rgba(7, 15, 48, 1) 0%,
+    rgba(22, 41, 196, 1) 78%,
+    rgba(60, 16, 227, 1) 91%
+  );
+}
+@media (max-width: 600px) and (min-width: 250px) {
+  .top2__entry__container {
+    background-color: rgb(218, 216, 213);
+    height: 320px;
+    width: 102%;
+    margin-top: 200px;
+    transition: all 3s;
+  }
+  .top__center__bottom > div > button {
+    width: 135px;
+    border: none;
+    padding: 3px;
+    box-shadow: 0 0 5px rgb(238, 240, 232);
+    background-color: transparent;
+    color: white;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(16, 201, 189, 1) 0%,
+      rgba(175, 129, 184, 0.856162447889312) 0%,
+      rgba(7, 25, 111, 1) 0%,
+      rgba(22, 41, 196, 1) 40%,
+      rgba(60, 16, 227, 1) 91%
+    );
+    font-weight: 400;
+    transition: all 1s inherit;
+  }
+  .top2__entry__container {
+    background-color: rgb(218, 216, 213);
+    height: 200px;
+    width: 100%;
+    transition: all 3s;
+  }
+  .top2__entry__box {
+    content: "";
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 21%);
+    height: 200px;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(24, 36, 150, 1) 52%,
+      rgba(0, 0, 0, 1) 100%,
+      rgba(12, 5, 69, 1) 100%
+    );
+    position: relative;
+  }
+}

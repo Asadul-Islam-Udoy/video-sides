@@ -1,0 +1,80 @@
+.box__section__model{
+ width: 40rem;
+}
+.single__update__container{
+  width: 100%;
+}
+.single__update__form{
+    width: 100%;
+}
+.single__update__form>div{
+    display: flex;
+    width: 100%;
+}
+.gap__div{
+   padding: 5px;
+   width: 100%;
+}
+
+.gap__div>div{
+    padding: 2px;
+ }
+.single__update__form>div>div{
+    padding: 2px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.single__update__form>div>div>div{
+    display: flex;
+    flex-direction: column;
+}
+.single__update__form>div>div>div>input{
+    padding: 4px;
+    width: 90%;
+}
+.single__update__form>div>div>div>textarea{
+    padding: 4px;
+    width: 100%;
+}
+.single__update__form>div>div>div>select{
+    padding: 5px;
+}
+.single__update__form>div>div>div>label{
+    font-weight: bold;
+}
+.video__show__div{
+    margin: 10px;
+}
+.add__button{
+    margin: 10px;
+    padding: 4px 30px;
+} 
+.button__section{
+    margin-top: 35px;
+}
+@media(max-width:600px) and (min-width:400px){
+    .box__section__model{
+        width: 95%;
+       }
+       .button__section{
+        margin-top: 0px;
+    }
+}
+@media(max-width:400px) and (min-width:200px){
+    .box__section__model{
+        width: 100%;
+       }
+       .single__update__form>div{
+        display: block;
+        width: 100%;
+    }
+    .single__update__form{
+        width: 100%;
+        overflow: scroll;
+        height: 400px;
+    }
+    .button__section{
+        margin-top: 0px;
+    }
+}

@@ -1,0 +1,135 @@
+.user__profile__navbar__conainer {
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  background-color: white;
+  top: 0;
+}
+.user__profile__navbar__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user__profile__navbar__left {
+  padding: 5px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+.user__profile__navbar__left > img {
+  height: 70px;
+  width: 130px;
+}
+.user__profile__toggle__icon {
+  font-size: 40px !important;
+  cursor: pointer;
+}
+.user__profile__navbar__center {
+  display: flex;
+  align-items: center;
+}
+.user__profile__navbar__center > p {
+  width: 1000px;
+  padding: 10px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+.user__profile__navbar__center > div {
+  background-color: rgb(227, 234, 235);
+  padding: 9px;
+  cursor: pointer;
+  border-right: 1px solid rgb(0, 0, 0);
+}
+.user__profile__search__icon {
+  color: rgb(250, 154, 10);
+}
+.user__profile__search__icon:hover {
+  color: rgb(6, 13, 75);
+  transition: all 0.5s ease-in;
+}
+.user__profile__navbar__right {
+  display: flex;
+  margin-right: 35px;
+}
+.user__profile__navbar__right > div {
+  padding: 1px;
+  margin: 10px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  transition: all 0.5s ease-in;
+  
+}
+.user__profile__navbar__right > div:hover {
+  background-color: rgb(227, 234, 235);
+  cursor: pointer;
+}
+.user__profile__right__icon {
+  font-size: 30px !important;
+}
+.user__profile__notification {
+  margin-right: 20px;
+  font-size: 20px 
+}
+.toggle__dashboard {
+  display: none;
+}
+.user__dashboard{
+  margin-top: 5px;
+  width: 100%;
+}
+.user__dashboard>li{
+  background-color: rgb(218, 205, 205);
+  width:60px;
+  padding: 2px;
+  font-weight: bold;
+}
+.user__dashboard>li>a{
+  text-decoration: none;
+  font-size: 12px;
+}
+@media (max-width: 600px) and (min-width: 280px) {
+  .user__profile__navbar__center{
+    display: none;
+  }
+  .user__profile__navbar__center > p {
+    width: 100%;
+    padding: 6px;
+  }
+  .user__profile__navbar__center > div {
+    background-color: rgb(236, 235, 235);
+    padding: 2px;
+  }
+  .toggle__dashboard {
+    display: block;
+  }
+  .user__profile__toggle__icon {
+    font-size: 30px !important;
+    cursor: pointer;
+  }
+  .user__profile__navbar__left > img {
+    height: 50px;
+    width: 130px;
+  }
+  .user__profile__navbar__center > p {
+    width: 50px;
+    padding: 1px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .user__profile__right__icon {
+    font-size: 25px !important;
+  }
+  .user__profile__navbar__right {
+    display: flex;
+    width: 100px;
+    
+  }
+  .right__icon {
+    font-size: 25px !important;
+  }
+}

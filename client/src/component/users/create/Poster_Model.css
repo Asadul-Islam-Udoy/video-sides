@@ -1,0 +1,28 @@
+#poster__model{
+    width:100%;
+}
+#poster__box{
+    width: 100%;
+}
+.create__container{
+ width:100%;
+}
+.create__form{
+ margin: 10px;
+}
+.create__form>div{
+    margin: 10px;
+    flex-direction: column;
+    display: flex;
+}
+.create__form>div>input{
+    margin: 5px;
+}
+@media(max-width:400px) and (min-width:280px){
+    .create__container{
+        width:200px;
+       } 
+    #transition-modal-title{
+        font-size: medium;
+    }
+}

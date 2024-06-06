@@ -1,0 +1,67 @@
+.payment__check__container{
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(16,201,189,1) 0%, rgba(175,129,184,0.856162447889312) 0%, rgba(7,25,111,1) 0%, rgba(22,41,196,1) 40%, rgb(36, 9, 134) 91%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.check__test__section{
+    margin: 10px;
+    width: 50%;
+    text-align: center;
+    color: rgb(15, 149, 202);
+    font-style: italic;
+}
+.payment__check__box{
+  width: 50%;
+  border: 2px solid white;
+  height: 80%;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 4px;
+  background-color: rgb(11, 11, 155);
+}
+.payment__check__box>div{
+  width: 100%;
+  margin: 5px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+.payment__check__box>div>span:nth-of-type(1){
+  font-weight: bold;
+  color: rgb(10, 102, 207);
+  }
+.payment__check__box>div>button{
+   padding: 5px;
+   border: none;
+   width: 100%;
+   border-radius: 2px; 
+   font-weight: bold;
+   color: rgb(7, 150, 233);
+}
+@media(max-width:600px){
+    .payment__check__container{
+        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(16,201,189,1) 0%, rgba(175,129,184,0.856162447889312) 0%, rgba(7,25,111,1) 0%, rgba(22,41,196,1) 40%, rgb(36, 9, 134) 91%);
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .check__test__section{
+        margin: 10px;
+        width: 100%;
+        text-align: center;
+        color: rgb(15, 149, 202);
+        font-style: italic;
+    }
+    .payment__check__box{
+      width: 100%;
+      border: 2px solid white;
+      height: 100%;
+      box-shadow: 0px 0px 5px black;
+    }  
+}

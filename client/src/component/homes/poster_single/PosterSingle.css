@@ -1,0 +1,114 @@
+.poster__single__container{
+ width: 100%;
+}
+.poster__single__box__1{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.poster__single__box__1>div{
+    width: 100%;
+    position: relative;
+}
+.poster__single__box__1>div>div{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+.poster__single__box__1>div>div>div{
+   padding: 10px;
+   cursor: pointer;
+   transition: all 0.5s;
+}
+.poster__single__box__1>div>div>div:hover{
+    background-color: rgb(248, 126, 12);
+ }
+.poster__single__box__1>div>div>div>button{
+    padding: 50px 2px;
+    border: none;
+ }
+ .poster__single__box__1>div>div>div:nth-of-type(1){
+    margin-top: 20px;
+ }
+.poster__single__box__1>div>div>div:nth-of-type(2){
+   margin-right: 20px;
+}
+.poster__single__box__1>div>img{
+    width: 100vw;
+    height:80vh;
+}
+.poster__single__box__2{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.poster__single__box__2>div:nth-of-type(1){
+    display: flex;
+    margin: 5px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .poster__single__box__2>div:nth-of-type(1)>h1{
+    margin-top: -10px;
+  }
+  .poster__single__box__2>div:nth-of-type(1)>span{
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: -5px;
+  }
+.poster__single__box__2>div:nth-of-type(2){
+  display: flex;
+  margin: 5px;
+  width: 100%;
+  overflow: scroll;
+  align-items: center;
+  justify-content: center;
+  
+}
+.carosel__image{
+    width: 70px;
+    height: 80px;
+    margin: 5px;
+    border: 2px solid rgb(27, 5, 109);
+}
+.image__border{
+    width: 70px;
+    height: 80px;
+    margin: 5px;
+    border: 3px solid rgb(243, 58, 12);
+}
+.poster__single__box__3{
+    width: 100vw;
+    text-align: center;
+    box-shadow: 0px 0px 5px black;
+    padding: 5px;
+    background-color: rgb(7, 27, 90);
+}
+.poster__single__box__3>h1{
+font-weight: bold;
+color: rgb(4, 162, 235);  
+}
+.poster__single__box__4{
+    padding: 5px;
+    font-style: italic;
+    background-color: rgb(153, 157, 172);
+}
+
+@media(max-width:500px) and (min-width:300px){
+    .poster__single__box__1>div>img{
+        width: 100vw;
+        height:50vh;
+    } 
+    .poster__single__box__2{
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,89 @@
+.user__profile__videos__container{
+    width: 100%;
+    overflow: hidden;
+   }
+   .user__profile__add__button{
+       width: 100%;
+       margin-left: 80%;
+      
+   }
+   .user__profile__add__button>button{
+   padding: 12px 38px;
+   border: none;
+   cursor: pointer;
+   }
+   .video__table__container{
+     width: 100%;
+   }
+   .icon__section{
+       display: flex;
+       cursor: pointer;
+   }
+   .icon__section>div{
+       padding: 5px;
+       background-color: gainsboro;
+   }
+   .edit__icon{
+       color: rgb(19, 152, 240);
+   }
+   .delete__icon{
+       color: rgb(240, 19, 19);
+   }
+   .groups__icon{
+    color: red;
+   }
+   .groups__section{
+    margin-top: 20px;
+    border-radius: 5px;
+   }
+   .groups__section:hover{
+    background-color: rgb(190, 189, 201);
+   }
+   @media(max-width:600px){
+       .user__profile__videos__container{
+           width: 200vw;
+          }
+       .user__profile__add__button{
+           width: 10%;
+           margin-left: 80%;
+           margin-bottom: 10px;
+       }
+       .user__profile__add__button>button{
+           padding: 8px 30px;
+           border: none;
+           cursor: pointer;
+           }  
+   }
+   .user__groups__add__button{
+     margin: 5px;
+   }
+   .user__groups__add__button>button{
+    margin: 5px;
+    padding: 5px 20px;
+  }
+
+  /* model section */
+ .groups__sections{
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .groups__sections>div{
+    width:70%;
+    position: absolute;
+    height: 50vh;
+    background-color: rgb(3, 47, 83);
+   overflow: scroll;
+ }
+ @media(max-width:500px) and (min-width:200px){
+    .groups__sections>div{
+        width:50%;
+        position: absolute;
+        height: 50vh;
+        background-color: rgb(3, 47, 83);
+       overflow: scroll;
+     }
+ }

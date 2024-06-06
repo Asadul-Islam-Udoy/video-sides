@@ -1,0 +1,36 @@
+.lodder__section__containser{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .lodder__section__box{
+   width: 100px;
+   height: 100px;
+   background-color: transparent;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   border-left: 5px solid rgb(231, 223, 223);
+   border-top: 5px solid rgb(2, 1, 53);
+   border-right: 5px solid rgb(2, 1, 53);
+   animation: fide_in 5s linear  infinite;
+   transition: all 1s;
+  
+  }
+  @keyframes fide_in{
+    from{
+      rotate: 0deg;
+      scale: 0.8;
+    }
+    to{
+      rotate: 360deg;
+      scale: 1;
+      border-left: 5px solid rgb(231, 223, 223);
+      border-top: 5px solid rgb(235, 162, 6);
+      border-right: 5px solid rgb(230, 140, 6);
+    }
+  }

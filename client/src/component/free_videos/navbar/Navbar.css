@@ -1,0 +1,219 @@
+.navbar__conainer{
+width: 100%;
+position: fixed;
+z-index: 999;
+}
+.navbar__box{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background-color: white;
+}
+.navbar__left{
+padding: 5px;
+height: 60px;
+display: flex;
+align-items: center;
+margin: 10px;
+}
+.navbar__left>img{
+height: 70px;
+width: 130px;
+}
+.toggle__icon{
+    font-size: 40px !important;
+    cursor: pointer;
+}
+.navbar__center{
+ display: flex;
+ align-items: center;
+}
+.navbar__center>input{
+width: 900px;
+padding: 6.5px;
+font-size: 18px;
+border:none;
+border-top: 2px solid rgb(17, 12, 92);
+border-bottom: 2px solid black;
+border-left: 2px solid black;
+}
+.navbar__center>input:focus{
+   outline: none;
+ }
+ .navbar__center>div{
+    background-color: rgb(227, 234, 235);
+    padding: 9px;
+    cursor: pointer;
+    border-right: 1px solid rgb(0, 0, 0);
+}
+ .search__icon{
+  color: rgb(250, 154, 10);  
+ }
+ .search__icon:hover{
+    color: rgb(6, 13, 75);  
+    transition: all 0.5s ease-in;
+}
+.navbar__right{
+ display: flex;
+ margin-right: 35px;
+ 
+}
+.navbar__right>div{
+    padding: 1px;
+    margin: 10px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    transition: all 0.5s ease-in;
+    background-color: transparent;
+   }
+.profile__icon:hover{
+    background-color: rgb(227, 234, 235);
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all 0.5s ease-in;
+}
+.right__icon{
+    font-size: 35px !important;  
+    
+    
+}
+.notification{
+    margin-right: 0px;
+    margin-left: 10px;
+}
+.notification:hover{
+    background-color: rgb(227, 234, 235);
+    cursor: pointer;
+    border-radius: 50%;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all 0.5s ease-in;
+}
+.user__dashboard{
+   margin-top: 4px;
+   background-color: gainsboro;
+   padding: 10px;
+   width: 100px;
+   position: absolute;
+   transform: translateX(-30px);
+   border-radius: 3px;
+}
+.user__dashboard>li{
+   list-style: none;
+   display: flex;
+   margin: 4px;
+   padding: 3px;
+   width: 100%;
+   transition: all 0.5s;
+ }
+ .user__dashboard>li:hover{
+    border: 1px solid black;
+  }
+.user__dashboard>li>a{
+    text-decoration: none;
+    padding: 0px 5px;
+   
+}
+@media(max-width:600px){
+    
+.navbar__center>input{
+ width: 100%;
+padding: 1.8px 4px;
+font-size: 14px;
+border:none;
+border-top: 1px solid rgb(17, 12, 92);
+border-bottom: 1px solid black;
+border-left: 1px solid black;
+}   
+.navbar__center>div{
+    background-color: rgb(236, 235, 235);
+    padding: 2px 3px;
+} 
+.search__icon{
+    color: rgb(250, 154, 10);  
+    font-size: 20px !important;
+}
+.navbar__right{
+    display: flex;
+    margin-right: 3px;
+    
+   }
+.user__dashboard{
+    margin-top: 4px;
+    background-color: gainsboro;
+    padding: 10px;
+    width: 90px;
+    position: absolute;
+    transform: translateX(-39px);
+    border-radius: 3px;
+ }
+ .user__dashboard>li{
+    list-style: none;
+    display: flex;
+    margin: 1px;
+    padding: 2px;
+    width: 100%;
+    transition: all 0.5s;
+  }
+}
+@media(max-width:400px){
+    .navbar__left>img{
+        height: 50px;
+        width: 100px;
+        }
+        .toggle__icon{
+            font-size: 35px !important;
+            cursor: pointer;
+        }
+    .navbar__center>input{
+     width: 100%;
+     padding: 4.5px;
+    }   
+    .navbar__center>div{
+        background-color: rgb(236, 235, 235);
+        padding: 5px;
+    } 
+    .user__dashboard{
+        margin-top: 4px;
+        background-color: gainsboro;
+        width: 95px;
+        position: absolute;
+        transform: translateX(-56px);
+        border-radius: 3px;
+        margin-left: 10px;
+     }
+     .user__dashboard>li{
+        list-style: none;
+        display: flex;
+        margin: 4px;
+        padding: 3px;
+        width: 100%;
+        transition: all 0.5s;
+      }
+      .profile__icon:hover{
+        background-color: rgb(227, 234, 235);
+        cursor: pointer;
+        border-radius: 50%;
+        padding: 5px;
+        transition: all 0.5s ease-in;
+    }
+      .right__icon{
+        font-size: 34px !important;  
+    }
+    .notification{
+        margin-right: 0px;
+        margin-left: 15px;
+        
+    }
+    .notification:hover{
+        margin-right: 0px;
+        margin-left: 15px;
+        background-color: rgb(227, 234, 235);
+        border-radius: 50%;
+        padding: 5px;
+        transition: all 0.5s ease-in;
+    }
+    }

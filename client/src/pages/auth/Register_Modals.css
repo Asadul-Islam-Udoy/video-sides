@@ -1,0 +1,37 @@
+.register__from{
+    padding: 10px;
+}
+.register__from>div{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.register__from>div>div{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.login__register__box{
+    width: 150;
+}
+.register__icon{
+ position: absolute;
+ margin: 5px;
+}
+.register__from>div>div>input{
+    padding: 4px 35px;
+    width: 100%;
+}
+.register__login{
+    font-size: 12px;
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+@media(max-width:600px) and (min-width:260px){
+    .login__register__box{
+        width: 100%;
+    }
+}
