@@ -35,7 +35,7 @@ export const VideoAddressStoreAction=({username,email,address,city,state,stateCo
   try{
    dispatch({type:PAYMENT_CONFRIM_REQUEST});
    const config = {headers:{'Content-Type':'application/json'}}; 
-   const {data} = await axios.post('/api/videos/payment/confirm',fromData,config)
+   const {data} = await axios.post('https://video-sides.onrender.com/api/videos/payment/confirm',fromData,config)
    dispatch({type:PAYMENT_CONFRIM_SUCCESS,
    payload:data
    })
@@ -57,7 +57,7 @@ export const VideoAddressStoreAction=({username,email,address,city,state,stateCo
   try{
    dispatch({type:ORDER_VIDEO_SHOW_REQUEST});
    const config = {headers:{'Content-Type':'application/json'}};
-   const{data} = await axios.get('/api/videos/get/user/orders/',config);
+   const{data} = await axios.get('https://video-sides.onrender.com/api/videos/get/user/orders/',config);
    dispatch({type:ORDER_VIDEO_SHOW_SUCCESS,
    payload:data.orders
    })
@@ -74,7 +74,7 @@ export const userPaymentVideoAction=()=>async(dispatch)=>{
   try{
    dispatch({type:USER_GET_PAYMENT_VIDEO_ME_REQUEST});
    const config = {headers:{'Content-Type':'application/json'}}
-   const{data} = await axios.get('/api/videos/get/me/user/payment/videos/profit/',config);
+   const{data} = await axios.get('https://video-sides.onrender.com/api/videos/get/me/user/payment/videos/profit/',config);
    dispatch({type:USER_GET_PAYMENT_VIDEO_ME_SUCCESS,
    payload:data.pymentVideos
    })
