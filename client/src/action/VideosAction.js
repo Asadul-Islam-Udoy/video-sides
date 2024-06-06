@@ -76,10 +76,10 @@ export const getAllFreeVideosAction=(keyword,paginationbar)=>async(dispatch)=>{
   try{
      let getData ;
      if(keyword){
-       getData = `/api/videos/get/all/free/videos?keyword=${keyword}&page=${1}`
+       getData = `https://video-sides.onrender.com/api/videos/get/all/free/videos?keyword=${keyword}&page=${1}`
      }
      else{
-      getData = `/api/videos/get/all/free/videos?page=${paginationbar}`
+      getData = `https://video-sides.onrender.com/api/videos/get/all/free/videos?page=${paginationbar}`
      }
      dispatch({type:GET_ALL_VIDEOS_REQUEST});
      const{data} = await axios.get(getData);
@@ -99,10 +99,10 @@ export const getAllPaymentVideosAction=(keyword,paginationbar)=>async(dispatch)=
   try{
      let getData ;
      if(keyword){
-       getData = `/api/videos/get/all/payment/videos?keyword=${keyword}&page=${1}`
+       getData = `https://video-sides.onrender.com/api/videos/get/all/payment/videos?keyword=${keyword}&page=${1}`
      }
      else{
-      getData = `/api/videos/get/all/payment/videos?page=${paginationbar}`
+      getData = `https://video-sides.onrender.com/api/videos/get/all/payment/videos?page=${paginationbar}`
      }
      dispatch({type:GET_ALL_VIDEOS_REQUEST});
      const{data} = await axios.get(getData);
@@ -128,7 +128,7 @@ export const createVideoGroupName=(fromData)=>async(dispatch)=>{
   try{
      dispatch({type:CREATE_GROUPS_VIDEO_REQUEST});
      const config = {headers:{'Content-Type':'application/json'}};
-     const{data} = await axios.post('/api/videos/create/group/name',fromData,config);
+     const{data} = await axios.post('https://video-sides.onrender.com/api/videos/create/group/name',fromData,config);
      dispatch({type:CREATE_GROUPS_VIDEO_SUCCESS,
      payload:data.groups
     })
@@ -145,7 +145,7 @@ export const createVideoGroupName=(fromData)=>async(dispatch)=>{
 export const getSingleFreeGroupVideo=(id)=>async(dispatch)=>{
   try{
      dispatch({type:GET_VIDEOS_GROUPS_SINGLE_REQUEST});
-     const{data} = await axios.get(`/api/videos/get/single/free/groups/videos/${id}`);
+     const{data} = await axios.get(`https://video-sides.onrender.com/api/videos/get/single/free/groups/videos/${id}`);
      dispatch({type:GET_VIDEOS_GROUPS_SINGLE_SUCCESS,
      payload:data.videos
     })
@@ -161,7 +161,7 @@ export const getSingleFreeGroupVideo=(id)=>async(dispatch)=>{
 export const getSinglePaymentGroupVideo=(id)=>async(dispatch)=>{
   try{
      dispatch({type:GET_VIDEOS_GROUPS_SINGLE_REQUEST});
-     const{data} = await axios.get(`/api/videos/get/single/payment/groups/videos/${id}`);
+     const{data} = await axios.get(`https://video-sides.onrender.com/api/videos/get/single/payment/groups/videos/${id}`);
      dispatch({type:GET_VIDEOS_GROUPS_SINGLE_SUCCESS,
      payload:data.videos
     })
@@ -178,7 +178,7 @@ export const getVideoGroupName=()=>async(dispatch)=>{
   try{
      dispatch({type:GET_NAME_GROUPS_VIDEO_REQUEST});
      const config = { headers:{'Content-Type':'application/json'}}
-     const{data} = await axios.get('/api/videos/get/groups/name/',config);
+     const{data} = await axios.get('https://video-sides.onrender.com/api/videos/get/groups/name/',config);
      dispatch({type:GET_NAME_GROUPS_VIDEO_SUCCESS,
      payload:data.groups
     })
@@ -195,7 +195,7 @@ export const getVideoGroupName=()=>async(dispatch)=>{
 export const createVideo=(id,fromData)=>async(dispatch)=>{
   try{
      dispatch({type:CREATE_VIDEO_REQUEST});
-     const{data} = await axios.post(`/api/videos/single/create/${id}`,fromData);
+     const{data} = await axios.post(`https://video-sides.onrender.com/api/videos/single/create/${id}`,fromData);
      dispatch({type:CREATE_VIDEO_SUCCESS,
      payload:data.videos
     })
@@ -212,7 +212,7 @@ export const getFreeSingleVideoAction=(id)=>async(dispatch)=>{
   try{
      dispatch({type:GET_SINGLE_VIDEO_REQUEST});
      const config = {headers:{'Content-Type':'application/josn'}};
-     const{data} = await axios.get(`/api/videos/get/single/free/video/${id}`,config);
+     const{data} = await axios.get(`https://video-sides.onrender.com/api/videos/get/single/free/video/${id}`,config);
      dispatch({type:GET_SINGLE_VIDEO_SUCCESS,
      payload:data.video
     })
@@ -229,7 +229,7 @@ export const getPaymentSingleVideoAction=(id)=>async(dispatch)=>{
   try{
      dispatch({type:GET_SINGLE_VIDEO_REQUEST});
      const config = {headers:{'Content-Type':'application/josn'}};
-     const{data} = await axios.get(`/api/videos/get/single/payment/video/${id}`,config);
+     const{data} = await axios.get(`https://video-sides.onrender.com/api/videos/get/single/payment/video/${id}`,config);
      dispatch({type:GET_SINGLE_VIDEO_SUCCESS,
      payload:data.video
     })
@@ -245,7 +245,7 @@ export const getsingleVideoOfUser=()=>async(dispatch)=>{
   try{
      dispatch({type:GET_SINGLE_VIDEOS_OF_USER_REQUEST});
      const config = { headers:{'Content-Type':'application/json'}}
-     const{data} = await axios.get('/api/videos/get/all/single/user/videos',config);
+     const{data} = await axios.get('https://video-sides.onrender.com/api/videos/get/all/single/user/videos',config);
      dispatch({type:GET_SINGLE_VIDEOS_OF_USER_SUCCESS,
      payload:data.videos
     })
@@ -263,7 +263,7 @@ export const getsingleVideoOfUser=()=>async(dispatch)=>{
 export const upateSingleOfVideoUser=(id,fromData)=>async(dispatch)=>{
   try{
     dispatch({type:UPDATE_VIDEOS_REQUEST});
-    const{data} = await axios.put(`/api/videos/update/single/user/video/${id}/`,fromData);
+    const{data} = await axios.put(`https://video-sides.onrender.com/api/videos/update/single/user/video/${id}/`,fromData);
     dispatch({type:UPDATE_VIDEOS_SUCCESS,
     payload:data.videos
    })
@@ -280,7 +280,7 @@ export const deleteSingleOfVideoUser=(id)=>async(dispatch)=>{
   try{
      dispatch({type:DELETE_VIDEOS_REQUEST});
      const config ={headers:{'Content-Type':'application/json'}}
-     const{data} = await axios.delete(`/api/videos/delete/single/user/video/${id}`,config);
+     const{data} = await axios.delete(`https://video-sides.onrender.com/api/videos/delete/single/user/video/${id}`,config);
      dispatch({type:DELETE_VIDEOS_SUCCESS,
      payload:data.videos
     })
@@ -297,7 +297,7 @@ export const deleteSingleOfVideoUser=(id)=>async(dispatch)=>{
 export const createGroupVideo=(fromData)=>async(dispatch)=>{
   try{
      dispatch({type:CREATE_VIDEOS_GROUPS_VIDEO_REQUEST});
-     const{data} = await axios.post('/api/videos/group/video/create/',fromData);
+     const{data} = await axios.post('https://video-sides.onrender.com/api/videos/group/video/create/',fromData);
      dispatch({type:CREATE_VIDEOS_GROUPS_VIDEO_SUCCESS,
      payload:data.videos
     })
@@ -314,7 +314,7 @@ export const getgroupsVideoOfUser=()=>async(dispatch,getState)=>{
   try{
      dispatch({type:GET_GROUPS_VIDEOS_OF_USER_REQUEST});
      const config = { headers:{'Content-Type':'application/json'}};
-     const{data} = await axios.get('/api/videos/get/all/user/group/videos',config);
+     const{data} = await axios.get('https://video-sides.onrender.com/api/videos/get/all/user/group/videos',config);
      dispatch({type:GET_GROUPS_VIDEOS_OF_USER_SUCCESS,
      payload:data.videos
     })
@@ -333,7 +333,7 @@ export const getgroupsVideoOfUserUnique=(id)=>async(dispatch)=>{
     console.log('group_id',id)
      dispatch({type:GET_GROUPS_VIDEOS_USER_UNIQUE_REQUEST});
      const config = { headers:{'Content-Type':'application/json'}}
-     const{data} = await axios.get(`/api/videos/get/user/single/group/video/${id}`,config);
+     const{data} = await axios.get(`https://video-sides.onrender.com/api/videos/get/user/single/group/video/${id}`,config);
      dispatch({type:GET_GROUPS_VIDEOS_USER_UNIQUE_SUCCESS,
      payload:data.videos
     })
@@ -350,7 +350,7 @@ export const videoLikeAction=(id)=>async(dispatch)=>{
   try{
      dispatch({type:VIDEO_LIKE_REQUEST});
      const config = { headers:{'Content-Type':'application/json'}};
-     const{data} = await axios.put(`/api/videos/video/like/${id}`,config);
+     const{data} = await axios.put(`https://video-sides.onrender.com/api/videos/video/like/${id}`,config);
      dispatch({type:VIDEO_LIKE_SUCCESS,
      payload:data.video
     })
@@ -369,7 +369,7 @@ export const videoCommendCreateAction=(id,commend)=>async(dispatch)=>{
   try{
      dispatch({type:VIDEO_COMMEND_CREATE_REQUEST});
      const config = { headers:{'Content-Type':'application/json'}};
-     const{data} = await axios.post(`/api/videos/create/commend/${id}/`,{commend},config);
+     const{data} = await axios.post(`https://video-sides.onrender.com/api/videos/create/commend/${id}/`,{commend},config);
      dispatch({type:VIDEO_COMMEND_CREATE_SUCCESS,
      payload:data.commends
     })
@@ -386,7 +386,7 @@ export const videoCommendGetAction=(id)=>async(dispatch)=>{
   try{
      dispatch({type:VIDEO_COMMEND_GET_REQUEST});
      const config = { headers:{'Content-Type':'application/json'}}
-     const{data} = await axios.get(`/api/videos/get/video/commends/${id}/`,config);
+     const{data} = await axios.get(`https://video-sides.onrender.com/api/videos/get/video/commends/${id}/`,config);
      dispatch({type:VIDEO_COMMEND_GET_SUCCESS,
      payload:data.commends
     })
@@ -414,7 +414,7 @@ export const isUserVideoReset=()=>async(dispatch)=>{
 export const createPosterAction=(fromData)=>async(dispatch)=>{
   try{
      dispatch({type:POSTER_CREATE_REQUEST})
-     const{data} = await axios.post('/api/posters/create/',fromData)
+     const{data} = await axios.post('https://video-sides.onrender.com/api/posters/create/',fromData)
      dispatch({type:POSTER_CREATE_SUCCESS,
      payload:data
     })
@@ -435,7 +435,7 @@ export const getPosterAction=()=>async(dispatch,getState)=>{
      const config = {headers:{'Content-Type':'application/json',
      'Authorization':`bearer ${userInfo.access_token}`
      }}
-     const{data} = await axios.get('http://127.0.0.1:8000/api/get/video/poster/',config);
+     const{data} = await axios.get('https://video-sides.onrender.com/api/get/video/poster/',config);
      dispatch({type:POSTER_GET_SUCCESS,
      payload:data.poster_images
     })
@@ -455,7 +455,7 @@ export const deletePosterAction=(id)=>async(dispatch,getState)=>{
      const config = {headers:{'Content-Type':'application/json',
      'Authorization':`bearer ${userInfo.access_token}`
      }}
-     const{data} = await axios.delete(`http://127.0.0.1:8000/api/delete/video/poster/${id}`,config);
+     const{data} = await axios.delete(`https://video-sides.onrender.com/api/delete/video/poster/${id}`,config);
      dispatch({type:POSTER_DELETE_SUCCESS,
      payload:data
     })
@@ -476,7 +476,7 @@ export const posterReset=()=>(dispatch)=>{
 export const getAllPosterAction=()=>async(dispatch)=>{
   try{
      dispatch({type:POSTER_GET_ALL_REQUEST});
-     const{data} = await axios.get('/api/posters/get/all/');
+     const{data} = await axios.get('https://video-sides.onrender.com/api/posters/get/all/');
      dispatch({type:POSTER_GET_ALL_SUCCESS,
      payload:data.posters
     })
@@ -493,7 +493,7 @@ export const getSinglePosterAction=(id)=>async(dispatch)=>{
   try{
      dispatch({type:POSTER_GET_SINGLE_REQUEST});
      const config = {headers:{'Content-Type':'application/json'}}
-     const{data} = await axios.get(`/api/posters/get/single/${id}/`,config);
+     const{data} = await axios.get(`https://video-sides.onrender.com/api/posters/get/single/${id}/`,config);
      console.log('action',data)
      dispatch({type:POSTER_GET_SINGLE_SUCCESS,
      payload:data.poster
@@ -513,7 +513,7 @@ export const cratePosterReviewAction=(id,fromData)=>async(dispatch)=>{
   try{
      dispatch({type:POSTER_CREATE_REVIEW_REQUEST});
      const config = {headers:{'Content-Type':'application/json'}}
-     const{data} = await axios.post(`/api/posters/review/${id}/`,fromData,config);
+     const{data} = await axios.post(`https://video-sides.onrender.com/api/posters/review/${id}/`,fromData,config);
      dispatch({type:POSTER_CREATE_REVIEW_SUCCESS,
      payload:data
     })
