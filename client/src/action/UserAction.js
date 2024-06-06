@@ -39,7 +39,7 @@ export const RegisterAction=(fromData)=>async(dispatch)=>{
    try{
      dispatch({type:REGISTER_CREATE_REQUEST});
      const config = {headers:{'Content-Type':'application/json'}}
-     const{data} = await axios.post('/api/users/register/',fromData,config);
+     const{data} = await axios.post('https://video-sides.onrender.com/api/users/register/',fromData,config);
      dispatch({type:REGISTER_CREATE_SUCCESS,
      payload:data
     })
@@ -55,7 +55,7 @@ export const LoginAction=(email,password)=>async(dispatch)=>{
     try{
       dispatch({type:LOGIN_CREATE_REQUEST});
       const config = {headers:{"Content-Type":"application/json"}}
-      const{data} = await axios.post('/api/users/login/',{email,password},config);
+      const{data} = await axios.post('https://video-sides.onrender.com/api/users/login/',{email,password},config);
       dispatch({type:LOGIN_CREATE_SUCCESS,
       payload:data
      })
@@ -71,7 +71,7 @@ export const LoginAction=(email,password)=>async(dispatch)=>{
  export const LogoutAction=()=>async(dispatch)=>{
     try{
        dispatch({type:LOGOUT_CREATE_REQUEST});
-       const{data} = await axios.get('/api/users/logout');
+       const{data} = await axios.get('https://video-sides.onrender.com/api/users/logout');
       dispatch({type:LOGOUT_CREATE_SUCCESS,
       payload:data
      })
@@ -89,7 +89,7 @@ export const LoginAction=(email,password)=>async(dispatch)=>{
    try{
     dispatch({type:UPDATE_USER_INFO_REQUEST});
     const config = {headers:{'Content-Type':'application/json'}};
-    const{data} = await axios.put('/api/users/update/',fromData,config);
+    const{data} = await axios.put('https://video-sides.onrender.com/api/users/update/',fromData,config);
     dispatch({type:UPDATE_USER_INFO_SUCCESS,
       payload:data
     })
@@ -106,7 +106,7 @@ export const LoginAction=(email,password)=>async(dispatch)=>{
    try{
     dispatch({type:FORGET_PASSWORD_EMAIL_REQUEST});
     const config = {headers:{'Content-Type':'application/json'}};
-    const {data} = await axios.post('/api/users/forgetpassword/email/',{email},config);
+    const {data} = await axios.post('https://video-sides.onrender.com/api/users/forgetpassword/email/',{email},config);
     dispatch({type: FORGET_PASSWORD_EMAIL_SUCCESS,
      payload:data
     })
@@ -123,7 +123,7 @@ export const LoginAction=(email,password)=>async(dispatch)=>{
    try{
     dispatch({type:FORGET_PASSWORD_RESET_REQUEST});
     const config = {headers:{'Content-Type':'application/json'}};
-    const {data} = await axios.put('/api/users/forgetpassword/reset/',fromData,config);
+    const {data} = await axios.put('https://video-sides.onrender.com/api/users/forgetpassword/reset/',fromData,config);
     dispatch({type: FORGET_PASSWORD_RESET_SUCCESS,
      payload:data
     })
@@ -144,7 +144,7 @@ export const LoginAction=(email,password)=>async(dispatch)=>{
       dispatch({type:GET_ALL_USERS_REQUEST});
       const config={headers:{'Content-Type':'application/json',
       'Authorization' : `bearer ${userInfo?.access_token}`}}
-      const{data} = await axios.get('http://127.0.0.1:8000/api/get/all/users',config);
+      const{data} = await axios.get('https://video-sides.onrender.com/api/get/all/users',config);
       dispatch({type:GET_ALL_USERS_SUCCESS,
       payload:data.users
     })
@@ -162,7 +162,7 @@ export const deleteAdminUserAction=(id)=>async(dispatch,getState)=>{
       dispatch({type:DELETE_USER_REQUEST});
       const config={headers:{'Content-Type':'application/json',
       'Authorization' : `bearer ${userInfo?.access_token}`}}
-      const{data} = await axios.delete(`http://127.0.0.1:8000/api/delete/user/${id}`,config);
+      const{data} = await axios.delete(`https://video-sides.onrender.com/api/delete/user/${id}`,config);
       dispatch({type:DELETE_USER_SUCCESS,
       payload:data.users
     })
@@ -180,7 +180,7 @@ export const permissionUserAction=(id,fromData)=>async(dispatch,getState)=>{
       dispatch({type:PERMISSION_USER_REQUEST});
       const config={headers:{'Content-Type':'multipart/form-data',
       'Authorization' : `bearer ${userInfo?.access_token}`}}
-      const{data} = await axios.post(`http://127.0.0.1:8000/api/permission/user/${id}`,fromData,config);
+      const{data} = await axios.post(`https://video-sides.onrender.com/api/permission/user/${id}`,fromData,config);
       dispatch({type:PERMISSION_USER_SUCCESS,
       payload:data.users
     })
@@ -198,7 +198,7 @@ export const RolePermissionUserAction=(id,fromData)=>async(dispatch,getState)=>{
       dispatch({type:ROLE_PERMISSION_USER_REQUEST});
       const config={headers:{'Content-Type':'application/json',
       'Authorization' : `bearer ${userInfo?.access_token}`}}
-      const{data} = await axios.post(`http://127.0.0.1:8000/api/permission/user/role/${id}`,fromData,config);
+      const{data} = await axios.post(`https://video-sides.onrender.com/api/permission/user/role/${id}`,fromData,config);
       dispatch({type:ROLE_PERMISSION_USER_SUCCESS,
       payload:data.users
     })
